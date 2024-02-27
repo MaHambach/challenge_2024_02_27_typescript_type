@@ -50,3 +50,28 @@ function printStudentList(studentList: Student[]) {
 
 printStudentList(studentList);
 
+type Cat = {
+    id: string;
+    name: string;
+    color: string;
+}
+
+let cat: Cat = {
+    id: "1",
+    name: "Whiskers",
+    color: "black"
+}
+
+let updatedCat: Cat = {
+    ...cat,
+    color: "orange"
+}
+
+console.log(cat);
+console.log(updatedCat);
+
+cat.id = "2";
+
+console.log(cat);
+console.log(updatedCat);
+
