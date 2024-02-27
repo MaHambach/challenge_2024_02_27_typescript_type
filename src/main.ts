@@ -26,13 +26,20 @@ const student3: Student = {
     grades: ["A", "1", "1", "", "3", "2", "4", "5"]
 };
 
+const student4: Student = {
+    firstName: 'Juliette',
+    lastName: 'Genius',
+    age: 9,
+    grades: ["A", "1", "1", "", "S", "1", "1", "2"]
+};
+
 function printStudent(student: Student) {
     console.log(student.firstName + " " + student.lastName + " (" + student.age + ")");
-    console.log("=".repeat(30));
+    console.log("=".repeat(student.firstName.length + student.lastName.length + student.age.toString().length + 4));
     console.log("Grades: " + student.grades.map((grade) => !grade ? "*" : grade).join(","));
 }
 
-const studentList: Student[] = [student, student2, student3];
+const studentList: Student[] = [student, student2, student3, student4];
 
 function printStudentList(studentList: Student[]) {
     studentList.forEach((student) => {
